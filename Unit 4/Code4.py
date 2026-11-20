@@ -1,8 +1,13 @@
 
 import json
+import os
+
+# Get the folder where this Python file is located
+folder = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(folder, "logs.json")
 
 # Read JSON log file
-with open("logs.json", "r") as file:
+with open(file_path, "r") as file:
     logs = json.load(file)
 
 print("\n--- LOG FILE ANALYZER ---")
